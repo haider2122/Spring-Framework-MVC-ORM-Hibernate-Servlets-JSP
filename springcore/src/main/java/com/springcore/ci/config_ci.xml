@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<bean class="com.springcore.ci.Course" name="course" c:cName="Java And Python"><!-- Schema Method -->
+<!-- <constructor-arg value="Java Spring Course"/> --><!-- Attribute method  -->
+<!-- <constructor>
+<value>Java Spring Course</value>  Element method 
+</constructor> -->
+
+</bean>    
+    
+<bean class="com.springcore.ci.Person" name="person">
+<constructor-arg value="Somebody"/>
+<constructor-arg value="55" type="int"/>
+<constructor-arg ref="course"/>
+
+
+</bean>
+<bean class="com.springcore.ci.Addnumbers" name="add">
+<constructor-arg value="1" type="int"/>
+<constructor-arg value="3" type="int"/>
+
+
+
+
+
+
+</bean>
+
+</beans>
